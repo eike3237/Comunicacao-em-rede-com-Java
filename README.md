@@ -1,7 +1,8 @@
 # Comunicacao-em-rede-com-Java
 O objetivo desse projeto acadêmico, foi desenvolver a comunicação em rede entre diferentes instâncias de um mesmo programa, através da linguagem Java
 
-Proposta entregue em mãos:
+*Proposta entregue em mãos:*
+
 Pede-se aos alunos que desenvolvam em Java ou C# uma ferramenta para
 comunicação em rede. O grupo deverá criar uma aplicação que permita que duas ou
 mais pessoas possam se comunicar em uma rede, utilizando o protocolo TCP/IP.
@@ -16,7 +17,7 @@ Secretaria
 Utilizamos o SWING para ajudar no desenvolvimento das interfaces de exibição.
 
 
-Resultado final do programa:
+*Resultado final do programa:*
 
 
 ![image](https://user-images.githubusercontent.com/54451865/214953277-c459213d-4de7-4b52-8abf-a5bc795d652f.png)
