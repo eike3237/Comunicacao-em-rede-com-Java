@@ -27,6 +27,10 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
+import javax.swing.text.DefaultCaret;
+
+import java.awt.Font;
+import javax.swing.ScrollPaneConstants;
 
 public class ClientSection extends JFrame implements ActionListener, KeyListener{
 
@@ -110,6 +114,7 @@ public class ClientSection extends JFrame implements ActionListener, KeyListener
 		pnlContent.setLayout(null);
 		
 		txtMsg = new JTextField(20); // !!!! 
+		txtMsg.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		txtMsg.addKeyListener(this); //Listener de ativação para o própio txtMsg
 		txtMsg.setBounds(6, 214, 347, 28);
 		txtMsg.setColumns(10);
@@ -156,6 +161,7 @@ public class ClientSection extends JFrame implements ActionListener, KeyListener
 		pnlContent.add(lblMsg);
 		
 		texto = new JTextArea();
+		texto.setFont(new Font("Monospaced", Font.BOLD, 14));
 		texto.setLineWrap(true);
 		texto.setEditable(false);
 		texto.setBackground(SystemColor.menu);
@@ -165,6 +171,10 @@ public class ClientSection extends JFrame implements ActionListener, KeyListener
 		scroll.setBounds(6, 30, 341, 165);
 		pnlContent.add(scroll);
 		scroll.setViewportView(texto);
+		
+		// auto-scroll
+		DefaultCaret caret = (DefaultCaret)texto.getCaret();
+		caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
 		
 		//2 Linhas abaixo teste, pode tirar
 		//texto.setBorder(BorderFactory.createEtchedBorder(Color.BLUE, Color.BLUE));

@@ -77,7 +77,7 @@ public class ServerSection extends Thread {
 			  for(BufferedWriter bw : clientes){
 			   bwS = (BufferedWriter)bw;
 			   if(!(bwSaida == bwS)){
-			     bw.write(nome + " -> " + msg+"\r\n");
+			     bw.write(nome + ": \n " + msg+"\r");
 			     bw.flush();
 			   }
 			  }
